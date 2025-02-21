@@ -2,7 +2,7 @@ const Loading = ({ size = 20 }) => {
   return (
     <img
       style={{ width: `${size}px` }}
-      src="../../public/loading.gif"
+      src="/assets/loading.gif"
       alt="Loading"
     />
   );

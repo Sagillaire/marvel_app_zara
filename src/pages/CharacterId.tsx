@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import GeneralLoadingScreen from "../components/GeneralLoadingScreen";
 import { HeartIcon } from "../components/HeartIcon";
 import Loading from "../components/Loading";
+import { LoadingComicsContainer } from "../GlobalStyles";
 import { useFetchCharacterById } from "../hooks/useFetchCharacterById";
 import { useFetchComics } from "../hooks/useFetchComics";
 import { useMarvelStore } from "../store/marvel_store";
@@ -70,9 +71,15 @@ const CharacterId = () => {
       </CharacterInfo>
 
       <ComicsSection>
-        <SectionTitle>COMICS</SectionTitle>
+        <SectionTitle>
+          {isLoading || isComicsLoading || !comics
+            ? "Cargando comics..."
+            : "COMICS"}
+        </SectionTitle>
         {isLoading || isComicsLoading || !comics ? (
-          <Loading size={200} />
+          <LoadingComicsContainer>
+            <Loading size={200} />
+          </LoadingComicsContainer>
         ) : !comics ? (
           <ComicYear>
             Parece que este personaje no ha tenido tiempo de protagonizar
@@ -87,7 +94,7 @@ const CharacterId = () => {
                   <ComicImage
                     src={
                       IMAGES?.path + "." + IMAGES?.extension ||
-                      "/question_mark.png"
+                      "/assets/loading.gif"
                     }
                     alt={comic?.title}
                   />
