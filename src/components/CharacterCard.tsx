@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useMarvelStore } from "../store/marvel_store";
 import { getFavoriteColor } from "../utils/isfavorite";
 import {
@@ -16,18 +16,22 @@ export interface CharacterCardProps {
 }
 
 const CharacterCard = ({ id, name, thumbnail }: CharacterCardProps) => {
-  const { toggleFavorite, favorites } = useMarvelStore();
   const navigate = useNavigate();
+  const { toggleFavorite, favorites } = useMarvelStore();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const query = searchParams.get("query") || "";
 
   const thumbnail_url = thumbnail?.path + "." + thumbnail?.extension;
 
+  const handleNavigate = () => {
+    setSearchParams({ query });
+    navigate(`/character/${id}`);
+  };
+
   return (
     <Card key={id}>
-      <CharacterImage
-        src={thumbnail_url}
-        onClick={() => navigate(`/character/${id}`)}
-        alt={name}
-      />
+      <CharacterImage src={thumbnail_url} onClick={handleNavigate} alt={name} />
       <CardRectangle />
       <div
         style={{

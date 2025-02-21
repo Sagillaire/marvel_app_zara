@@ -1,11 +1,31 @@
 import styled from "styled-components";
+import { device } from "../utils/mediaQueries";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  height: 100%;
+`;
 
 export const CharacterInfo = styled.div`
   display: flex;
+  position: relative;
   align-items: center;
   user-select: none;
+
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: #ffffff;
+    bottom: -20px;
+    right: -20px;
+    z-index: 10;
+    transform: rotate(45deg);
+  }
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 
 export const CharacterImage = styled.img`
@@ -15,6 +35,10 @@ export const CharacterImage = styled.img`
   min-width: 35%;
   height: 280px;
   object-fit: fill;
+
+  @media ${device.tablet} {
+    width: 100%;
+  }
 `;
 
 export const CharacterDetails = styled.div`
@@ -23,6 +47,10 @@ export const CharacterDetails = styled.div`
   padding: 48px;
   gap: 24px;
   width: 100%;
+  @media ${device.tablet} {
+    height: auto;
+    padding: 0px 24px 24px;
+  }
 `;
 
 export const Header = styled.div`
@@ -54,6 +82,7 @@ export const ComicsSection = styled.div`
 
 export const SectionTitle = styled.h3`
   margin-top: 0;
+  margin-bottom: 20px;
 `;
 
 export const ComicsContainer = styled.div`

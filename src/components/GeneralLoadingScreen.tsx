@@ -5,12 +5,12 @@ const GeneralLoadingScreen = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "rgba(76, 76, 76, 0.05)",
+        background: "#000000e3",
         width: "100vw",
-        height: "100%",
+        height: "calc(100% - 90px)",
       }}
     >
-      <img src="../../public/mvst.gif" alt="General Loading" />
+      <img src="/assets/mvst.gif" alt="General Loading" />
     </div>
   );
 };

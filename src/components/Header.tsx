@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <HeaderStyled>
       <HeaderNav>
-        <img src="/marvel_logo.png" alt="Marvel logo" />
+        <img src="/assets/marvel_logo.png" alt="Marvel logo" />
         <FavoritesContainer onClick={() => navigate("/favorites")}>
           <HeartIcon width={20} />
           <NumberFavorites>{favorites.length}</NumberFavorites>
