@@ -24,7 +24,7 @@ createRoot(document.getElementById("root")!).render(
               <Route path="/" element={<Characters />} />
               <Route path="/favorites" element={<Favorites />} />
               <Route path="/character/:id" element={<CharacterDetails />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="/*" element={<NotFound />} />
             </Routes>
           </GeneralContainerComponent>
         </RQProvider>
