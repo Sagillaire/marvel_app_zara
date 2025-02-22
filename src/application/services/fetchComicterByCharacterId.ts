@@ -1,4 +1,4 @@
-import { ComicsInterface } from "../models/comics.model";
+import { ComicsInterface } from "../../models/comics.model";
 import { marvelAPi } from "./api";
 
 export const fetchComicterByCharacterId = async (id: number) => {

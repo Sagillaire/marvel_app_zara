@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { MarvelState } from "../models/marvel_store.model";
+import { MarvelState } from "../../models/marvel_store.model";
 
 export const useMarvelStore = create<MarvelState>((set) => ({
   query: "",
