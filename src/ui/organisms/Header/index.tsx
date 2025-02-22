@@ -12,10 +12,13 @@ const Header = () => {
   const { favorites } = useMarvelStore();
   const navigate = useNavigate();
 
+  const handleBack = () => navigate("/");
+  const logo = "/assets/marvel_logo.png";
+
   return (
     <HeaderStyled>
       <HeaderNav>
-        <img src="/assets/marvel_logo.png" alt="Marvel logo" />
+        <img onClick={handleBack} src={logo} alt="Marvel logo" />
         <FavoritesContainer onClick={() => navigate("/favorites")}>
           <HeartIcon width={20} />
           <NumberFavorites>{favorites.length}</NumberFavorites>
