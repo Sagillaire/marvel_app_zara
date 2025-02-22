@@ -26,3 +26,7 @@ dist-ssr
 #Env files
 .env
 .env-example
+
+#Lock Files
+yarn.lock
+package.json.lock
