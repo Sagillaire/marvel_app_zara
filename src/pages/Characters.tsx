@@ -1,16 +1,19 @@
 import { Fragment } from "react";
-import CharacterCard, { CharacterCardProps } from "./components/CharacterCard";
-import Loading from "./components/Loading";
-import Search from "./components/Search";
-import { LoadingComicsContainer, MainContainer } from "./GlobalStyles";
-import { useFetchCharacters } from "./hooks/useFetchCharacters";
+import CharacterCard, { CharacterCardProps } from "../ui/organisms/CharacterCard";
+import Loading from "../ui/molecules/Loading";
+import { useFetchCharacters } from "../hooks/useFetchCharacters";
+import SearchBar from "../ui/molecules/SearchBar";
+import {
+  LoadingComicsContainer,
+  MainContainer,
+} from "../ui/styles/GlobalStyles";
 
-function App() {
+function Characters() {
   const { data: characters = [], isLoading } = useFetchCharacters();
 
   return (
     <Fragment>
-      <Search />
+      <SearchBar />
       <MainContainer>
         {isLoading ? (
           <LoadingComicsContainer>
@@ -26,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default Characters;

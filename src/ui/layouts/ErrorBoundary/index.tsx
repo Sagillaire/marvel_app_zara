@@ -1,8 +1,8 @@
 import React, { ErrorInfo } from "react";
 import {
-    ErrorBoundaryProps,
-    ErrorBoundaryState,
-} from "../models/ErrorBoundary.model";
+  ErrorBoundaryProps,
+  ErrorBoundaryState,
+} from "../../../models/ErrorBoundary.model";
 
 class ErrorBoundary extends React.Component<
   ErrorBoundaryProps,

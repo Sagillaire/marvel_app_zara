@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../utils/mediaQueries";
+import { device } from "../../utils/mediaQueries";
 
 export const Container = styled.div`
   height: 100%;
@@ -41,7 +41,7 @@ export const CharacterImage = styled.img`
   }
 `;
 
-export const CharacterDetails = styled.div`
+export const CharacterDetailsStyled = styled.div`
   height: 280px;
   background-color: #000000;
   padding: 48px;
@@ -49,7 +49,7 @@ export const CharacterDetails = styled.div`
   width: 100%;
   @media ${device.tablet} {
     height: auto;
-    padding: 0px 24px 24px;
+    padding: 0px 24px 30px;
   }
 `;
 

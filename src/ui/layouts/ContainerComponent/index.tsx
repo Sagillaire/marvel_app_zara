@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { GeneralContainer } from "../GlobalStyles";
+import { GeneralContainer } from "../../styles/GlobalStyles";
 
 const GeneralContainerComponent = ({ children }: { children: ReactNode }) => {
   return <GeneralContainer>{children}</GeneralContainer>;

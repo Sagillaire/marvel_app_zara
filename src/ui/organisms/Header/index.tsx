@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import { useMarvelStore } from "../store/marvel_store";
+import { useMarvelStore } from "../../../application/store/marvel_store";
+import HeartIcon from "../../atoms/HeartIcon";
 import {
   FavoritesContainer,
   HeaderNav,
   HeaderStyled,
   NumberFavorites,
-} from "./HeaderStyled";
-import { HeartIcon } from "./HeartIcon";
+} from "./styled";
 
 const Header = () => {
   const { favorites } = useMarvelStore();
