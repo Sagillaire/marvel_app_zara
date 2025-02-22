@@ -1,14 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "../utils/mediaQueries";
+import Button from "../ui/atoms/Button";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
-  padding: 80px 150px;
-  height: calc(100vh - 90px);
+  padding: 0px 150px;
+  height: calc(100% - 90px);
 
   @media ${device.laptop} {
     padding: 80px;
@@ -34,17 +35,6 @@ const Subtitle = styled.h3`
 const List = styled.ul`
   color: gray;
   font-size: 14px;
-`;
-
-const Button = styled.button`
-  background-color: #ec1d24;
-  outline: none;
-  border: none;
-  padding: 10px 50px;
-  border-radius: 3px;
-  color: #ffffff;
-  font-weight: 500;
-  cursor: pointer;
 `;
 
 const Image = styled.img`
@@ -76,9 +66,9 @@ export const NotFound = () => {
             <li>O llama a Doctor Strange (si lo conoces).</li>
           </List>
         </Content>
-        <Button onClick={handleBack}>Go Home!</Button>
+        <Button onClick={handleBack} title="Go Home!" />
       </div>
-      <Image src="/captain_marvel.png" alt="Not found image" />
+      <Image src="/assets/captain_marvel.png" alt="Not found image" />
     </Container>
   );
 };

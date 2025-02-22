@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchComicterByCharacterId } from "../services/fetchComicterByCharacterId";
+import { fetchComicterByCharacterId } from "../application/services/fetchComicterByCharacterId";
 
 export const useFetchComics = (id: number) => {
   return useQuery({

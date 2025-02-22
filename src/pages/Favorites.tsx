@@ -1,10 +1,16 @@
-import CharacterCard from "../components/CharacterCard";
-import { MainContainer } from "../GlobalStyles";
-import { useMarvelStore } from "../store/marvel_store";
+import { useMarvelStore } from "../application/store/marvel_store";
+import CharacterCard from "../ui/organisms/CharacterCard";
+import { MainContainer } from "../ui/styles/GlobalStyles";
+
+export interface FavoritesInterface {
+  url: string;
+  id: string;
+  name: string;
+}
 
 const Favorites = () => {
   const { favorites } = useMarvelStore();
-  const newFavorites = favorites.map((favorite) => ({
+  const newFavorites = favorites.map((favorite: FavoritesInterface) => ({
     id: favorite?.id,
     name: favorite?.name,
     thumbnail: {
@@ -18,7 +24,7 @@ const Favorites = () => {
       {!favorites ? (
         <h1>No tienes personajes favoritos.</h1>
       ) : (
-        newFavorites.map((character) => (
+        newFavorites.map((character: any) => (
           <CharacterCard key={character?.id} {...character} />
         ))
       )}
