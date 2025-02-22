@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-export const SearchContainer = styled.div``;
-
 export const SearchContent = styled.div`
   display: flex;
   align-items: center;
@@ -29,9 +27,4 @@ export const SearchInput = styled.input`
   &::placeholder {
     color: #aaaaaa;
   }
-`;
-
-export const SearchResults = styled.span`
-  font-size: 12px;
-  margin: 0 48px
 `;

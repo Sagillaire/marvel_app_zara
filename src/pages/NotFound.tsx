@@ -1,15 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "../utils/mediaQueries";
-import Button from "../components/Button";
+import Button from "../ui/atoms/Button";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
-  padding: 80px 150px;
-  height: calc(100vh - 90px);
+  padding: 0px 150px;
+  height: calc(100% - 90px);
 
   @media ${device.laptop} {
     padding: 80px;

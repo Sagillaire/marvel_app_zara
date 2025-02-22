@@ -4,9 +4,9 @@ export const HeaderStyled = styled.header`
   background-color: #000000;
   position: sticky;
   z-index: 100;
-  height: 90px;
+  height: 89.2px;
   display: flex;
-  padding: 16px 48px;
+  padding: 0px 48px;
   align-items: center;
   border-bottom: 1px solid #333333;
   top: 0;

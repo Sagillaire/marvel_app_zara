@@ -32,6 +32,21 @@ export const CardRectangle = styled.div`
   width: 100%;
 `;
 
+export const CardBottom = styled.div`
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Title = styled.span`
+  color: #ffffff;
+  overflow: hidden;
+  max-width: 150px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+`;
+
 export const FavoriteContainer = styled.span`
   transition: all 0.3s;
   cursor: pointer;

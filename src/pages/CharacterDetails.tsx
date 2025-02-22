@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
-import GeneralLoadingScreen from "../components/GeneralLoadingScreen";
-import { HeartIcon } from "../components/HeartIcon";
-import Loading from "../components/Loading";
-import { LoadingComicsContainer } from "../GlobalStyles";
+import { useMarvelStore } from "../application/store/marvel_store";
+import GeneralLoadingScreen from "../ui/layouts/ScreenLoading";
 import { useFetchCharacterById } from "../hooks/useFetchCharacterById";
 import { useFetchComics } from "../hooks/useFetchComics";
-import { useMarvelStore } from "../store/marvel_store";
+import HeartIcon from "../ui/atoms/HeartIcon";
+import Loading from "../ui/molecules/Loading";
+import { LoadingComicsContainer } from "../ui/styles/GlobalStyles";
 import { getFavoriteColor } from "../utils/isfavorite";
 import {
-  CharacterDetails,
+  CharacterDetailsStyled,
   CharacterImage,
   CharacterInfo,
   CharacterName,
@@ -23,9 +23,9 @@ import {
   FavoriteButton,
   Header,
   SectionTitle,
-} from "./CharacterIdStyled";
+} from "../ui/styles/CharacterDetailsStyled";
 
-const CharacterId = () => {
+const CharacterDetails = () => {
   const { id } = useParams();
 
   const { toggleFavorite, favorites } = useMarvelStore();
@@ -49,7 +49,7 @@ const CharacterId = () => {
           src={data ? thumbnail_url : "../../public/loading.gif"}
           alt={data?.name}
         />
-        <CharacterDetails>
+        <CharacterDetailsStyled>
           <Header>
             <CharacterName>{data?.name}</CharacterName>
             <FavoriteButton
@@ -67,7 +67,7 @@ const CharacterId = () => {
             {data?.description ||
               "Este personaje es tan misterioso que su historia aún está en construcción... ¡quién sabe qué secretos guarda!"}
           </Description>
-        </CharacterDetails>
+        </CharacterDetailsStyled>
       </CharacterInfo>
 
       <ComicsSection>
@@ -110,4 +110,4 @@ const CharacterId = () => {
   );
 };
 
-export default CharacterId;
+export default CharacterDetails;

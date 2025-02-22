@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchCharacters } from "../services/fetchCharacters";
-import { useMarvelStore } from "../store/marvel_store";
+import { useMarvelStore } from "../application/store/marvel_store";
+import { fetchCharacters } from "../application/services/fetchCharacters";
 
 export const useFetchCharacters = () => {
   const { query } = useMarvelStore();
