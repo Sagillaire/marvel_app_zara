@@ -52,6 +52,7 @@ export const CharacterImage = styled.img`
 
   @media ${device.mobileL} {
     width: 100%;
+    max-width: none;
     object-fit: cover;
   }
 `;
