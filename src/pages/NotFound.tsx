@@ -1,49 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
-import { device } from "../utils/mediaQueries";
 import Button from "../ui/atoms/Button";
-
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  padding: 0px 150px;
-  height: calc(100% - 90px);
-
-  @media ${device.laptop} {
-    padding: 80px;
-  }
-
-  @media ${device.tablet} {
-    padding: 24px;
-  }
-`;
-
-const Content = styled.div`
-  margin-bottom: 30px;
-`;
-
-const Title = styled.h1`
-  color: black;
-`;
-
-const Subtitle = styled.h3`
-  color: black;
-`;
-
-const List = styled.ul`
-  color: gray;
-  font-size: 14px;
-`;
-
-const Image = styled.img`
-  width: 35%;
-
-  @media ${device.tablet} {
-    display: none;
-  }
-`;
+import {
+  Container,
+  Content,
+  Image,
+  List,
+  Subtitle,
+  Title,
+} from "../ui/styles/NotFoundStyles";
 
 export const NotFound = () => {
   const navigate = useNavigate();
