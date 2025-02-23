@@ -10,6 +10,20 @@ export const CharacterInfo = styled.div`
   position: relative;
   align-items: center;
   user-select: none;
+  background-color: #000000;
+  padding: 0 15%;
+
+  @media ${device.laptop} {
+    padding: 0 10%;
+  }
+
+  @media ${device.tablet} {
+    padding: 0;
+  }
+
+  @media ${device.mobileL} {
+    flex-direction: column;
+  }
 
   &::before {
     content: "";
@@ -22,22 +36,23 @@ export const CharacterInfo = styled.div`
     z-index: 10;
     transform: rotate(45deg);
   }
-
-  @media ${device.tablet} {
-    flex-direction: column;
-  }
 `;
 
 export const CharacterImage = styled.img`
   margin: 0;
   padding: 0;
-  width: 35%;
-  min-width: 35%;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   object-fit: fill;
 
   @media ${device.tablet} {
     width: 100%;
+    max-width: 200px;
+  }
+
+  @media ${device.mobileL} {
+    width: 100%;
+    object-fit: cover;
   }
 `;
 
@@ -77,7 +92,15 @@ export const Description = styled.p`
 `;
 
 export const ComicsSection = styled.div`
-  padding: 48px;
+  padding: 48px 15% 0;
+
+  @media ${device.laptop} {
+    padding: 48px 10% 0;
+  }
+
+  @media ${device.laptop} {
+    padding: 48px 24px;
+  }
 `;
 
 export const SectionTitle = styled.h3`
