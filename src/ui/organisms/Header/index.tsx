@@ -16,7 +16,7 @@ const Header = () => {
   const logo = "/assets/marvel_logo.png";
 
   return (
-    <HeaderStyled>
+    <HeaderStyled data-testid="favorites-container">
       <HeaderNav>
         <img onClick={handleBack} src={logo} alt="Marvel logo" />
         <FavoritesContainer onClick={() => navigate("/favorites")}>
