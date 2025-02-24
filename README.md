@@ -2,6 +2,14 @@
 
 Este proyecto consiste en una aplicación que interactúa con el API de Marvel. La app permite consultar información sobre personajes, cómics y eventos de Marvel utilizando la API pública proporcionada por Marvel.
 
+Este proyecto fue desarrollado utilizando **Vite** y **TypeScript**, lo que asegura un rendimiento rápido y un desarrollo eficiente.
+
+## Enlace de Producción
+
+La aplicación está desplegada en producción con **Vercel** y se puede acceder desde el siguiente enlace:
+
+[Marvel API App - Producción](https://marvel-app-zara.vercel.app/)
+
 ## Tecnologías y Dependencias
 
 Se utilizaron las siguientes dependencias para el desarrollo del proyecto:
@@ -57,38 +65,36 @@ Asegúrate de definir las siguientes variables de entorno en tu archivo `.env`:
 
 Para instalar y ejecutar la aplicación en tu entorno local, sigue estos pasos:
 
-1. Clona el repositorio:
-
-   ```bash
-   git clone <url_del_repositorio>
-   cd <nombre_del_proyecto>
-
-## Instalación
-
-Para instalar y ejecutar la aplicación en tu entorno local, sigue estos pasos:
-
 1. **Instala las dependencias:**
 
    ```bash
    yarn install
+   ```
 
 ## Crea un archivo .env en la raíz del proyecto y define las variables de entorno:
+
 VITE_BASE_URL=<tu_url_base>
 VITE_PUBLIC_KEY=<tu_clave_publica>
 VITE_PRIVATE_KEY=<tu_clave_privada>
 
 ## Inicia la aplicación en modo desarrollo:
+
 yarn dev
 
 # Para generar la versión de producción:
+
 yarn build
 
 # Para ver la aplicación de producción de manera previa:
+
 yarn preview
 
 ## Pruebas
+
 # Para ejecutar las pruebas, usa el siguiente comando:
+
 yarn test
 
 # Para ver el reporte de cobertura:
+
 yarn coverage
