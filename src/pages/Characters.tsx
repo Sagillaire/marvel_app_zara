@@ -22,7 +22,7 @@ function Characters() {
           </LoadingComicsContainer>
         ) : (
           characters.map((character: CharacterCardProps) => (
-            <CharacterCard key={character?.id} {...character} />
+            <CharacterCard data-testid="character-card" key={character?.id} {...character} />
           ))
         )}
       </MainContainer>

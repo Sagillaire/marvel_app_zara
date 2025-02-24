@@ -20,7 +20,7 @@ const CharacterCard = ({ id, name, thumbnail }: CharacterCardProps) => {
   );
 
   return (
-    <Card key={id}>
+    <Card data-testid="character-card">
       <CharacterImage src={thumbnail_url} onClick={handleNavigate} alt={name} />
       <CardRectangle />
       <CardBottom>
