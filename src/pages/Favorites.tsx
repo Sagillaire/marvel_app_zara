@@ -15,8 +15,8 @@ const Favorites = () => {
 
   return (
     <MainContainer>
-      {!favorites ? (
-        <h1>No tienes personajes favoritos.</h1>
+      {!favorites.length ? (
+        <p style={{ margin: "0 auto" }}>No tienes personajes favoritos.</p>
       ) : (
         newFavorites.map((character: any) => (
           <CharacterCard key={character?.id} {...character} />

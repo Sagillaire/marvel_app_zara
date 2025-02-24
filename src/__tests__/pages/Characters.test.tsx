@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { vi } from "vitest";
-import { useFetchCharacters } from "../hooks/useFetchCharacters";
-import Characters from "../pages/Characters";
+import { useFetchCharacters } from "../../hooks/useFetchCharacters";
+import Characters from "../../pages/Characters";
 
-vi.mock("../hooks/useFetchCharacters", () => ({
+vi.mock("../../hooks/useFetchCharacters", () => ({
   useFetchCharacters: vi.fn(),
 }));
 

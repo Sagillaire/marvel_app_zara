@@ -1,4 +1,3 @@
-// src/components/Counter.tsx
 import { useState } from "react";
 
 const Counter = () => {

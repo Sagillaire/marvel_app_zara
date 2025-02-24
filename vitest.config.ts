@@ -7,7 +7,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: ["./src/tests/setup.ts"],
+    setupFiles: ["./src/__tests__/setup.ts"],
     coverage: {
       provider: "v8",
       exclude: [
@@ -23,8 +23,10 @@ export default defineConfig({
         "src/ui/styles/",
         "src/utils/",
         "src/models",
-        "src/ui/organisms/",
-        "src/ui/molecules/",
+        "src/ui/organisms/index.ts",
+        "src/ui/molecules/index.ts",
+        "src/ui/atoms/index.ts",
+        "src/ui/index.ts",
       ],
     },
   },
