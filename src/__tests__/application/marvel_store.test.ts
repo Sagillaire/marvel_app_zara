@@ -1,6 +1,6 @@
 import { act, renderHook } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { useMarvelStore } from "../application/store/marvel_store";
+import { useMarvelStore } from "../../application/store/marvel_store";
 
 describe("useMarvelStore", () => {
   it("should initialize with default state", () => {

@@ -1,15 +1,15 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { vi } from "vitest";
-import { useMarvelStore } from "../application/store/marvel_store";
-import { useFetchCharacterById } from "../hooks/useFetchCharacterById";
-import { useFetchComics } from "../hooks/useFetchComics";
-import { MarvelState } from "../models/marvel_store.model";
-import CharacterDetails from "../pages/CharacterDetails";
+import { useMarvelStore } from "../../application/store/marvel_store";
+import { useFetchCharacterById } from "../../hooks/useFetchCharacterById";
+import { useFetchComics } from "../../hooks/useFetchComics";
+import { MarvelState } from "../../models/marvel_store.model";
+import CharacterDetails from "../../pages/CharacterDetails";
 
-vi.mock("../hooks/useFetchCharacterById");
-vi.mock("../hooks/useFetchComics");
-vi.mock("../application/store/marvel_store");
+vi.mock("../../hooks/useFetchCharacterById");
+vi.mock("../../hooks/useFetchComics");
+vi.mock("../../application/store/marvel_store");
 
 describe("CharacterDetails", () => {
   const mockToggleFavorite = vi.fn();

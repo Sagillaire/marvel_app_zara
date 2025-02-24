@@ -1,7 +1,7 @@
 import { render, renderHook, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { useMarvelStore } from "../application/store/marvel_store";
-import Header from "../ui/organisms/Header";
+import { useMarvelStore } from "../../application/store/marvel_store";
+import Header from "../../ui/organisms/Header";
 
 describe("Header", () => {
   it("should render the marvel logo", () => {

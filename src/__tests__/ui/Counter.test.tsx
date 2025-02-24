@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Counter from "../ui/atoms/Counter";
+import Counter from "../../ui/atoms/Counter";
 
 describe("Counter", () => {
   it("increments the count when button is clicked", () => {

@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { vi } from "vitest";
-import { useMarvelStore } from "../application/store/marvel_store";
-import Favorites from "../pages/Favorites";
+import { useMarvelStore } from "../../application/store/marvel_store";
+import Favorites from "../../pages/Favorites";
 
-vi.mock("../application/store/marvel_store");
+vi.mock("../../application/store/marvel_store");
 
 describe("Favorites", () => {
   it("should render 'No tienes personajes favoritos.' when there are no favorites", () => {
