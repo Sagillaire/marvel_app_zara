@@ -4,7 +4,6 @@ import { vi } from "vitest";
 import { useMarvelStore } from "../application/store/marvel_store";
 import Favorites from "../pages/Favorites";
 
-// Mock del store
 vi.mock("../application/store/marvel_store");
 
 describe("Favorites", () => {

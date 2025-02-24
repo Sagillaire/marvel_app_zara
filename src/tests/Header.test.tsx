@@ -1,4 +1,3 @@
-// Header.test.tsx
 import { render, renderHook, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { useMarvelStore } from "../application/store/marvel_store";

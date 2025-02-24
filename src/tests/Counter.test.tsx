@@ -1,4 +1,3 @@
-// test/Counter.test.tsx
 import { fireEvent, render, screen } from "@testing-library/react";
 import Counter from "../ui/atoms/Counter";
 

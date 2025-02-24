@@ -1,3 +1,7 @@
+/**
+ * Defines the breakpoints for different device screen sizes.
+ * These sizes can be used to apply responsive design in CSS.
+ */
 const size = {
   mobileS: "320px",
   mobileM: "375px",
@@ -8,6 +12,10 @@ const size = {
   desktop: "2560px",
 };
 
+/**
+ * Media query expressions for different screen sizes.
+ * These can be used to apply specific CSS styles based on device size.
+ */
 export const device = {
   mobileS: `(max-width: ${size.mobileS})`,
   mobileM: `(max-width: ${size.mobileM})`,

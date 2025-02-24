@@ -4,7 +4,6 @@ import { MemoryRouter } from "react-router-dom";
 import { beforeEach, describe, it, vi } from "vitest";
 import { NotFound } from "../pages/NotFound";
 
-// Mock de useNavigate
 const navigateMock = vi.fn();
 
 vi.mock("react-router-dom", async () => {
