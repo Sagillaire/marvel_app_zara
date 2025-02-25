@@ -27,6 +27,7 @@ export default defineConfig({
         "src/ui/molecules/index.ts",
         "src/ui/atoms/index.ts",
         "src/ui/index.ts",
+        "src/ui/organisms/CharacterCard/interface.d.ts"
       ],
     },
   },
